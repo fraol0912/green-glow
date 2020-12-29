@@ -1,0 +1,13 @@
+.menu {
+  list-style: none;
+}
+
+.menu__item {
+  padding: 1rem 1.2rem;
+  transition: 500ms;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}

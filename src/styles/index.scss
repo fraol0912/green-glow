@@ -1,0 +1,37 @@
+@import "./constants.scss";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap");
+
+body {
+  background-color: #fff;
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  background: none;
+}
+
+img {
+  width: 100%;
+}
+
+@import "./components/menu.scss";
+@import "./components/hero.scss";
+@import "./components/jambo.scss";
+@import "./components/navbar.scss";
+@import "./components/footer.scss";
+@import "./components/article.scss";
+@import "./components/blog-card.scss";
+@import "./components/section-with-button.scss";

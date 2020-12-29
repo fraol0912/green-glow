@@ -1,0 +1,40 @@
+.section-with-button {
+  width: 100vw;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  &__text {
+    width: 70%;
+    text-align: center;
+    font-size: 1.4rem;
+    padding: 1.4rem 0;
+  }
+
+  &__button {
+    padding: 1rem;
+    cursor: pointer;
+    color: $color-2;
+    font-size: 1.3rem;
+    transition: 500ms;
+    border-radius: 5px;
+    letter-spacing: 5px;
+    font-weight: bolder;
+    text-transform: uppercase;
+
+    &:hover {
+      box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2),
+        0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .section-with-button {
+    &__text {
+      width: 90%;
+    }
+  }
+}

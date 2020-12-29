@@ -1,0 +1,129 @@
+backend:
+  name: git-gateway
+  branch: master
+  commit_messages:
+    create: "Create {{collection}} “{{slug}}”"
+    update: "Update {{collection}} “{{slug}}”"
+    delete: "Delete {{collection}} “{{slug}}”"
+    uploadMedia: "[skip ci] Upload “{{path}}”"
+    deleteMedia: "[skip ci] Delete “{{path}}”"
+
+media_folder: static/images
+public_folder: /images
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    description: "The Blogs collection"
+    folder: "src/pages/blogs"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}--{{slug}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "blog",
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Caption", name: "caption", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "src/pages/index.md"
+        label: "Index"
+        name: "index"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "index-page",
+            }
+          - { label: "Hero Image", name: "heroImage", widget: "image" }
+          - { label: "Hero Title", name: "heroTitle", widget: "string" }
+          - { label: "Hero Detail", name: "heroDetail", widget: "string" }
+          - { label: "Hero Link Text", name: "heroLinkText", widget: "string" }
+          - { label: "Hero Link URL", name: "heroLinkURL", widget: "string" }
+          - {
+              label: "About Section Text",
+              name: "aboutSectionText",
+              widget: "string",
+            }
+          - {
+              label: "About Button Text",
+              name: "aboutButtonText",
+              widget: "string",
+            }
+          - { label: "About Link To", name: "aboutLinkTo", widget: "string" }
+          - { label: "Jumbo Title", name: "jumboTitle", widget: "string" }
+          - {
+              label: "Jumbo Decription",
+              name: "jumboDecription",
+              widget: "string",
+            }
+          - { label: "Link Text", name: "linkText", widget: "string" }
+          - { label: "Link Href", name: "linkHref", widget: "string" }
+
+      - file: "src/pages/about/index.md"
+        label: "About"
+        name: "about"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "about-page",
+            }
+          - {
+              label: "About Hero Image",
+              name: "aboutHeroImage",
+              widget: "image",
+            }
+          - {
+              label: "About Hero Title",
+              name: "aboutHeroTitle",
+              widget: "string",
+            }
+          - {
+              label: "About Hero Detail",
+              name: "aboutHeroDetail",
+              widget: "string",
+            }
+
+      - file: "src/pages/contact/index.md"
+        label: "Contact"
+        name: "contact"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "contact-page",
+            }
+          - { label: "Hero Title", name: "heroTitle", widget: "string" }
+          - { label: "Hero Detail", name: "heroDetail", widget: "string" }
+          - { label: "Hero Image", name: "heroImage", widget: "image" }
+          - { label: "Facebook Icon", name: "facebookIcon", widget: "image" }
+          - { label: "Facebook URL", name: "facebookURL", widget: "string" }
+          - { label: "Linkedin Icon", name: "linkedinIcon", widget: "image" }
+          - { label: "Linkedin URL", name: "linkedinURL", widget: "string" }
+          - { label: "Telegram Icon", name: "telegramIcon", widget: "image" }
+          - { label: "Telegram URL", name: "telegramURL", widget: "string" }
+
+      - file: "src/pages/blogs/index.md"
+        label: "Blogs"
+        name: "blogs"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "blogs-page",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Decription", name: "decription", widget: "string" }

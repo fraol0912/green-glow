@@ -1,0 +1,17 @@
+.footer {
+  border-top: 2px solid $color-2;
+  padding: 1rem;
+
+  &__text {
+    color: $color-1;
+    text-align: center;
+  }
+  &__maker {
+    text-align: center;
+    background-image: linear-gradient(45deg, black, $color-2);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bolder;
+    padding: 1rem;
+  }
+}
