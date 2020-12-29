@@ -5,6 +5,9 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import BlogCardJumbo from "../components/BlogCardJumbo";
 
+// Styles
+import "../styles/index.scss";
+
 export function BlogsPageTemplate({ title, decription, blogs }) {
   return (
     <>

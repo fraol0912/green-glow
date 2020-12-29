@@ -5,6 +5,9 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import SingleBlog from "../components/SingleBlog";
 
+// Styles
+import "../styles/index.scss";
+
 function SingleBlogPageTemplate({ data }) {
   return (
     <Layout>
