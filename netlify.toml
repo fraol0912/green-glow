@@ -5,3 +5,8 @@
 [[redirects]]
   from = "/*"
   to = "/404"
+
+[[redirects]]
+  from = "/admin"
+  to ="/admin"
+
