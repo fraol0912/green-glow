@@ -2,11 +2,3 @@
   publish = "public"
   command =  "yarn build"
 
-[[redirects]]
-  from = "/*"
-  to = "/404"
-
-[[redirects]]
-  from = "/admin"
-  to ="/admin"
-
