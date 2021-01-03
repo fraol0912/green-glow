@@ -54,5 +54,6 @@ module.exports = {
         modulePath: CMS_FILE,
       },
     },
+    "gatsby-plugin-netlify",
   ],
 };

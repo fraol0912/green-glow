@@ -3,7 +3,7 @@ templateKey: index-page
 
 # heroSectionConfig
 
-heroImage: /images/green_computer.svg
+heroImage: /green_computer.svg
 heroTitle: Hello ipsum dolor sit amet
 heroDetail: >
   Lorem ipsum dolor sit amet consectetur 

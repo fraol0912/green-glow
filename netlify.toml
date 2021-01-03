@@ -2,3 +2,6 @@
   publish = "public"
   command =  "yarn build"
 
+[[redirects]]
+  from ="/admin"
+  to = "/admin/index.html"

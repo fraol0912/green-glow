@@ -27,6 +27,8 @@ export function IndexPageTemplate({
   jumboDecription,
   linkText,
   linkHref,
+
+  showBlogRoll,
 }) {
   return (
     <Layout>
@@ -41,12 +43,14 @@ export function IndexPageTemplate({
         buttonText={aboutButtonText}
         linkTo={aboutLinkTo}
       />
-      <BlogRollTemplate
-        jumboTitle={jumboTitle}
-        jumboDecription={jumboDecription}
-        linkText={linkText}
-        linkHref={linkHref}
-      />
+      {showBlogRoll && (
+        <BlogRollTemplate
+          jumboTitle={jumboTitle}
+          jumboDecription={jumboDecription}
+          linkText={linkText}
+          linkHref={linkHref}
+        />
+      )}
     </Layout>
   );
 }
@@ -55,6 +59,7 @@ function IndexPage({ data }) {
   return (
     <>
       <IndexPageTemplate
+        showBlogRoll={true}
         {...data.markdownRemark.frontmatter}
         heroImage={data.markdownRemark.frontmatter.heroImage.publicURL}
       />
