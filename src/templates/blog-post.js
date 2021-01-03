@@ -12,6 +12,7 @@ function SingleBlogPageTemplate({ data }) {
   return (
     <Layout>
       <SingleBlog
+        isPreview={false}
         image={data.markdownRemark.frontmatter.image.publicURL}
         caption={data.markdownRemark.frontmatter.caption}
         title={data.markdownRemark.frontmatter.title}
