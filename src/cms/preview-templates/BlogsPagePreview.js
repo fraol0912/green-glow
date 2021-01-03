@@ -4,7 +4,7 @@ import React from "react";
 import { BlogsPageTemplate } from "../../templates/blogs-page";
 
 function BlogsPagePreview({ entry }) {
-  const data = entry.getIn(["data"]);
+  const data = entry.getIn(["data"]).toJS();
 
   return (
     <>
