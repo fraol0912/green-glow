@@ -3,5 +3,5 @@
   command =  "yarn build"
 
 [[redirects]]
-  from ="/admin"
+  from = "/admin"
   to = "/admin/index.html"
