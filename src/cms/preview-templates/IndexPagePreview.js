@@ -10,8 +10,8 @@ function IndexPagePreview({ entry, getAsset }) {
     <>
       <IndexPageTemplate
         {...data}
-        showBlogRoll={false}
-        heroImage={getAsset(data.heroImage)}
+        noQueryJumbo={true}
+        heroImage={getAsset(data.heroImage).url}
       />
     </>
   );

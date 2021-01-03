@@ -3,8 +3,11 @@ import React from "react";
 // Template
 import { ContactPageTemplate } from "../../templates/contact-page";
 
-function ContactPagePreview({ entry }) {
-  const data = entry.getIn(["data"]);
+function ContactPagePreview({ entry, getAsset }) {
+  const data = entry.getIn(["data"]).toJS();
+  data.heroImage = getAsset(data.heroImage).url;
+
+  console.log(data);
 
   return (
     <>

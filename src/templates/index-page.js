@@ -5,6 +5,7 @@ import { graphql } from "gatsby";
 import Hero from "../components/Hero";
 import Layout from "../components/Layout";
 import SectionWithButton from "../components/SectionWithButton";
+import BlogCardJumbo from "../components/BlogCardJumbo";
 
 // Template
 import BlogRollTemplate from "./components/BlogRollTemplate";
@@ -27,8 +28,7 @@ export function IndexPageTemplate({
   jumboDecription,
   linkText,
   linkHref,
-
-  showBlogRoll,
+  noQueryJumbo,
 }) {
   return (
     <Layout>
@@ -43,7 +43,15 @@ export function IndexPageTemplate({
         buttonText={aboutButtonText}
         linkTo={aboutLinkTo}
       />
-      {showBlogRoll && (
+      {noQueryJumbo ? (
+        <BlogCardJumbo
+          jumboTitle={jumboTitle}
+          jumboDecription={jumboDecription}
+          linkText={linkText}
+          linkHref={linkHref}
+          blogs={[]}
+        />
+      ) : (
         <BlogRollTemplate
           jumboTitle={jumboTitle}
           jumboDecription={jumboDecription}
@@ -59,7 +67,7 @@ function IndexPage({ data }) {
   return (
     <>
       <IndexPageTemplate
-        showBlogRoll={true}
+        noQueryJumbo={false}
         {...data.markdownRemark.frontmatter}
         heroImage={data.markdownRemark.frontmatter.heroImage.publicURL}
       />
