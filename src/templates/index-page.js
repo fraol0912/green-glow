@@ -31,7 +31,7 @@ export function IndexPageTemplate({
   noQueryJumbo,
 }) {
   return (
-    <Layout>
+    <>
       <Hero
         heroTitle={heroTitle}
         heroImage={heroImage}
@@ -59,19 +59,19 @@ export function IndexPageTemplate({
           linkHref={linkHref}
         />
       )}
-    </Layout>
+    </>
   );
 }
 
 function IndexPage({ data }) {
   return (
-    <>
+    <Layout>
       <IndexPageTemplate
         noQueryJumbo={false}
         {...data.markdownRemark.frontmatter}
         heroImage={data.markdownRemark.frontmatter.heroImage.publicURL}
       />
-    </>
+    </Layout>
   );
 }
 

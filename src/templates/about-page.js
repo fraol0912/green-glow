@@ -14,22 +14,26 @@ export function AboutPageTemplate({
   aboutHeroDetail,
 }) {
   return (
-    <Layout>
+    <>
       <Hero
         heroTitle={aboutHeroTitle}
         heroImage={aboutHeroImage}
         heroDetail={aboutHeroDetail}
       />
-    </Layout>
+    </>
   );
 }
 
 function AboutPage({ data }) {
   return (
-    <AboutPageTemplate
-      {...data.markdownRemark.frontmatter}
-      aboutHeroImage={data.markdownRemark.frontmatter.aboutHeroImage.publicURL}
-    />
+    <Layout>
+      <AboutPageTemplate
+        {...data.markdownRemark.frontmatter}
+        aboutHeroImage={
+          data.markdownRemark.frontmatter.aboutHeroImage.publicURL
+        }
+      />
+    </Layout>
   );
 }
 
